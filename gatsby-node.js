@@ -10,9 +10,12 @@
 
 const path = require('path')
 
+/**
+ * with this function we create a page based on our data
+ */
 exports.createPages = async ({graphql, actions }) => {
     const {data} = await graphql(`
-        query product{
+        query products{
             allPrismicProductsv2 {
                 nodes {
                     data {

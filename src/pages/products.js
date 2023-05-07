@@ -11,9 +11,7 @@ const Products = ({data}) => {
     return (
         <Layout>
             <div className={s.products}>
-                {products.map(p => {
-                    return <ProductList key={p.data.id} product={p}/>
-                })}
+                {products.map(p => <ProductList key={p.data.id} product={p}/>)}
             </div>
         </Layout>
     )
@@ -24,7 +22,7 @@ export const Head = () => <Seo title="Products"/>
 export default Products
 
 export const query = graphql`
-    query MyQuery {
+    query allProducts {
         allPrismicProductsv2 {
             nodes {
                 data {

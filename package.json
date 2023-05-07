@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "hdcartpte-task",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "test task",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "kiselev1223maksim@gmail.com",
   "dependencies": {
     "@prismicio/react": "^2.6.0",
     "dotenv": "^16.0.3",
