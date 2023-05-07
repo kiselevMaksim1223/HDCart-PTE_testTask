@@ -1,6 +1,6 @@
 import React from 'react';
 import * as s from "../styles/product-details.module.css";
-import Layout from "../components/Layout";
+import Layout from "../components/layout";
 import {graphql, Link} from "gatsby";
 import {GatsbyImage} from "gatsby-plugin-image";
 import Seo from "../components/seo";

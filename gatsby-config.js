@@ -21,6 +21,7 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-gatsby-cloud`,
+    `gatsby-plugin-sass`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -41,7 +42,7 @@ module.exports = {
         repositoryName: "hdcartpte-test",
         accessToken: `${process.env.PRISMIC_ACCESS_TOKEN}`,
         customTypesApiToken: `${process.env.PRISMIC_CUSTOM_TYPES_API_TOKEN}` ,
-        linkResolver: ({node, key, value}) => post =>`/${post.id}`,
+        // linkResolver: ({node, key, value}) => post =>`/${post.id}`,
         schemas: {
           post: require("./custom_types/post.json")
         }
