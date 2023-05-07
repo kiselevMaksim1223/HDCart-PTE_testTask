@@ -1,10 +1,10 @@
 import React from 'react';
 import {Link} from "gatsby";
-import * as s from "../styles/products.module.scss";
+import * as s from "../styles/product-item.module.scss";
 import {GatsbyImage} from "gatsby-plugin-image";
 import Seo from "./seo";
 
-const ProductList = ({product}) => {
+const ProductItem = ({product}) => {
     return (
             <Link className={s.container} to={"/products/" + product.data.id} key={product.id}>
                 <div>
@@ -21,6 +21,6 @@ const ProductList = ({product}) => {
     )
 };
 
-export default ProductList;
+export default ProductItem;
 
 export const Head = () => <Seo title="ProductList"/>
