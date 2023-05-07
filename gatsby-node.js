@@ -7,12 +7,27 @@
 /**
  * @type {import('gatsby').GatsbyNode['createPages']}
  */
-exports.createPages = async ({ actions }) => {
-  const { createPage } = actions
-  createPage({
-    path: "/using-dsg",
-    component: require.resolve("./src/templates/using-dsg.js"),
-    context: {},
-    defer: true,
-  })
+
+const path = require('path')
+
+exports.createPages = async ({graphql, actions }) => {
+    const {data} = await graphql(`
+        query product{
+            allPrismicProductsv2 {
+                nodes {
+                    data {
+                        id
+                    }
+                }
+            }
+        }
+    `)
+
+    data.allPrismicProductsv2.nodes.forEach(pr => {
+        actions.createPage({
+            path: '/products/' + pr.data.id,
+            component: path.resolve('./src/templates/product-details.js'),
+            context: {id: pr.data.id}
+        })
+    })
 }

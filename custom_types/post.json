@@ -1,0 +1,47 @@
+{
+  "Main" : {
+    "id" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "id"
+      }
+    },
+    "product" : {
+      "type" : "Group",
+      "config" : {
+        "fields" : {
+          "title" : {
+            "type" : "StructuredText",
+            "config" : {
+              "single" : "heading3",
+              "label" : "title"
+            }
+          },
+          "description" : {
+            "type" : "StructuredText",
+            "config" : {
+              "multi" : "paragraph",
+              "allowTargetBlank" : true,
+              "label" : "description"
+            }
+          },
+          "price" : {
+            "type" : "Number",
+            "config" : {
+              "label" : "price"
+            }
+          },
+          "image" : {
+            "type" : "Image",
+            "config" : {
+              "constraint" : { },
+              "thumbnails" : [ ],
+              "label" : "image"
+            }
+          }
+        },
+        "label" : "data"
+      }
+    }
+  }
+}
