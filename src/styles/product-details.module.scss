@@ -78,4 +78,9 @@
   margin-left: 20px;
   font-size: 20px;
   font-weight: 500;
+  transition: all .1s ease-in-out;
+
+  &:hover {
+    background: rgb(119, 48, 96);
+  }
 }
