@@ -1,13 +1,13 @@
 import React from 'react';
 import {Link} from "gatsby";
-import * as s from "../styles/products.module.css";
+import * as s from "../styles/products.module.scss";
 import {GatsbyImage} from "gatsby-plugin-image";
 import Seo from "./seo";
 
 const ProductList = ({product}) => {
     return (
             <Link className={s.container} to={"/products/" + product.data.id} key={product.id}>
-                <div className={s.productImg}>
+                <div>
                     <GatsbyImage className={s.img}
                                  image={product.data.product[0].image.gatsbyImageData}
                                  alt={"imgs"}
